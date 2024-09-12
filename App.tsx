@@ -54,7 +54,10 @@ function App(): React.JSX.Element {
           <TextInput
             onChangeText={onChangeText}
             value={text}
-            style={[styles.input, text.length >= 100 && {color: 'red'}]}
+            style={[
+              styles.input,
+              text.length >= 100 ? {color: 'red'} : {color: 'green'},
+            ]}
             maxLength={100}
             multiline
           />
